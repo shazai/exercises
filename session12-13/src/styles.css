@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+a {
+  color: #185abc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #111;
+  color: white;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 2rem auto;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.filters input,
+.filters select,
+.product-form input,
+.product-form select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-card,
+.details-card,
+.info-card,
+.product-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.product-form {
+  max-width: 560px;
+}
+
+.product-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.product-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.message {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.error-message,
+.field-error {
+  color: #b00020;
+}
+
+.field-error {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+  .navbar,
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
